@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Registration form-customer</title>
+	<link rel="stylesheet" href="register.css"
+
+	<body>
+	
+		<div class="doc">
+			<header>
+				<div class="head">
+					<img src="title image.png" alt="choon පාන්">
+					<h2>Choon පාන්</h2>
+				</div>
+			</header>
+			
+			<div class="content">
+			<p><b>You have visited this site because you haven't register to our service.
+			So, please fill the form given below and register. Do not worry your informations are 
+			safe with us.</b></p>
+			
+			<form name="submit-to-google-sheet" class = "fr" action="" method="post">
+			<center>
+				<lable for = "">First Name</lable>
+				<input type="text" name="first" value=""><br>
+				
+				<lable for = "">Last Name</lable>
+				<input type="text" name="last" value=""><br>
+				
+				<lable for = "">Email</lable>
+				<input type="text" name="email" value=""><br>
+				
+				<lable for = "">Gender</lable><input type="radio" name="gender" value="Male"><lable>Male</lable>
+				<input type="radio" name="gender" value="Female"><lable>Female</lable><br>
+				
+				<lable for = "">NIC number</lable>
+				<input type="text" name="nic" value=""><br>
+				
+				<lable for = "">Mobile phone number</lable>
+				<input type="text" name="contact" value=""><br>
+				
+				<input type="checkbox" name="" value=""><span>I agree with all terms & conditions.<br><br></span><br>
+				
+				<a href=index.html><input type="button" name="" value="submit" ><br></a>
+			</form>
+			
+			<script>
+			  const scriptURL = 'https://script.google.com/macros/s/AKfycbxVLQvZ1-AvIyx7EabIxQ9MkUZqM8GuVCGcjVY4s3VGFDzkUwBOJL-5rNCDSEsbHPFYPw/exec'
+			  const form = document.forms['submit-to-google-sheet']
+
+			  form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				  .then(response => console.log('Success!', response))
+				  .catch(error => console.error('Error!', error.message))
+			  })
+			</script>
+
+	
+			</center>
+			</div>
+		
+		
+		</div>
+		
+		
+	</body
+
+	
+
+</head>
+
+</html>
